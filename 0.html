@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog Entry</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    blockquote {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f0f0ff;
+      border-left: 5px solid #5c6ac4;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .nav-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .nav-button {
+      background-color: #5c6ac4;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .menu a:hover {
+      background-color: #f0f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>v2.0.0</h1>
+	<h2 id="chng"">изменения:</h2>
+	<ul>
+	<li>create обновлен до 6-ой версии</li>
+	<li>quality-of-life</li>
+	<li>улучшение вещей касаемых farmer's delight, добавление аддонов совместимых с модами (twilight forest, enigmatic legacy)</li>
+	<li>улучшение вещей касаемых enigmatic legacy (добавление enigmatic addons, добавление крафтов, теперь при подборе какого-то там этого сосуда все вещи возвращаются в нужные слоты)</li>
+	<li>добавление новых происхождений (слизень и аксолотль, оба напрямую связаны с pehkui)</li>
+	<li>новые крафты</li>
+	<li>хуйня</li>
+	<li>общее обновление контента, добавление i wanna skate и прочих</li>
+	<li>упор в более дружелюбные к игроку интерфейс, информацию и около ванильные возможности в целом</li>
+	<li>новый крафт осколку души (тяжёлый пиздец.), удалить старый</li>
+	<li>изменен крафт структурной пустоте, добавить хроматический сплав и производные в качестве ступеней создания</li>
+	<li>spare change | coins</li>
+	<li>ribbits</li>
+	<li>creepers overhaul</li>
+	<li>endermans overhaul</li>
+	<li>effect descriptions</li>
+	<li>multi mine</li>
+	<li>armor weight</li>
+	<li>dynamo</li>
+	<li>inventory mending</li>
+	<li>create logistics</li>
+	<li>inventory tabs</li>
+	<li>the one probe</li>
+	<li>amendments</li>
+	<li>forgery</li>
+	<li>hexxy skies</li>
+	<li>текстурпаки на анимации и прочее</li>
+	<li>позаботиться о иммортале ресурспаках</li>
+	<li>fresh player animations</li>
+	<li>моды для косметических улучшений</li>
+	<li>not enough animations</li>
+	<li>first person model</li>
+	<li>effect mod (ну и сука название оригинальное)</li>
+	<li>датапак на отсутствие стартовой книжки hex casting и добавить её ко стартовым предметам</li>
+	</ul>
+	
+	<p id="misc">
+	<a href="https://github.com/savvypilot0/vanillaicecream/commits/">почитать полный ченджлог</a>
+	</p>
+	
+	<h2>важно!</h2>
+	<p>ОЧЕНЬ рекомендуется заглянуть в instance.cfg если вы собираетесь импортировать инстанс в призм.</p>
+	
+	<p><strong>на этом все,<br>バイバイ！</strong></p>
+	<img src="https://files.zhmixx.ru/media/other/baibai.gif" alt="baibai">
+  </div>
+
+  <div class="nav-buttons">
+    <button class="nav-button" onclick="toggleMenu()">☰ перейти к...</button>
+    <div class="menu" id="menu">
+      <a href="#chng">изменения</a>
+      <a href="#misc">остальное</a>
+    </div>
+    <button class="nav-button" onclick="scrollToTop()">↑ наверх</button>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      if (!menu.contains(event.target) && event.target.innerText !== '☰ перейти к...') {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
