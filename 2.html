@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1.1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    blockquote {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f0f0ff;
+      border-left: 5px solid #5c6ac4;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .nav-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .nav-button {
+      background-color: #5c6ac4;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .menu a:hover {
+      background-color: #f0f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>v2.2.0</h1>
+	<h2 id="chng"">изменения:</h2>
+<p>
+  - множество модов
+  + игровая консоль!
+  + было окончательно перепроверено всё на подобии ресурспаков, скриптов, конфигов, прочей хуеты.
+  + хуйня
+  - озу
+</p>
+	
+	<p id="misc">
+	<a href="https://github.com/savvypilot0/vanillaicecream/commit/8c78ad7ab73fb92ff0d141a963299e780a7f47a2">почитать полный ченджлог</a>
+	</p>
+
+	<h2>важно!</h2>
+	<p>ОЧЕНЬ рекомендуется заглянуть в instance.cfg если вы собираетесь импортировать инстанс в призм.<br></p>
+	<a class="nav-button" href="https://github.com/savvypilot0/vanillaicecream/archive/refs/tags/v2.1.1.zip">скачать zip</a>
+  <a class="nav-button" href="https://github.com/savvypilot0/vanillaicecream/archive/refs/tags/v2.1.1.tar.gz">скачать tar.gz</a>
+	<p><strong>на этом все,<br>バイバイ！</strong></p>
+	<img src="https://files.zhmixx.ru/media/other/baibai.gif" alt="baibai">
+  <br>
+
+  </div>
+
+  <div class="nav-buttons">
+    <button class="nav-button" onclick="toggleMenu()">☰ перейти к...</button>
+    <div class="menu" id="menu">
+      <a href="#chng">изменения</a>
+      <a href="#misc">скачать</a>
+    </div>
+    <button class="nav-button" onclick="scrollToTop()">↑ наверх</button>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      if (!menu.contains(event.target) && event.target.innerText !== '☰ перейти к...') {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
